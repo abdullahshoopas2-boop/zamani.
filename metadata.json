@@ -1,0 +1,6 @@
+{
+  "name": "Zamani | زماني",
+  "description": "Live countdowns for Islamic occasions, academic calendars across all 22 Arab countries, and a multilingual greeting card studio.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

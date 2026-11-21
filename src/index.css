@@ -1,0 +1,83 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --bg-page: #f7f6f2;
+  --bg-surface: #ffffff;
+  --bg-surface-soft: #f0eee7;
+  --border-subtle: #e5e1d6;
+  --border-strong: #d3cdbe;
+  --text-primary: #171a1c;
+  --text-secondary: #586069;
+  --text-muted: #707882;
+  --accent-primary: #0f6b5b;
+  --accent-primary-hover: #0b5649;
+  --accent-primary-soft: rgba(15, 107, 91, 0.09);
+  --accent-gold: #9a6c1d;
+  --accent-gold-soft: rgba(181, 132, 47, 0.12);
+  --accent-plum: #6d4c7d;
+  --accent-plum-soft: rgba(109, 76, 125, 0.1);
+  --font-ar: 'IBM Plex Sans Arabic', 'Segoe UI', Tahoma, sans-serif;
+  --font-en: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-hi: 'Noto Sans Devanagari', 'Plus Jakarta Sans', sans-serif;
+  --font-serif-ar: 'Amiri', Georgia, serif;
+}
+
+.dark {
+  --bg-page: #0c1014;
+  --bg-surface: #141a21;
+  --bg-surface-soft: #1b232c;
+  --border-subtle: #242e3a;
+  --border-strong: #324050;
+  --text-primary: #f1efe9;
+  --text-secondary: #b2bcc7;
+  --text-muted: #828e9b;
+  --accent-primary: #2eb398;
+  --accent-primary-hover: #3ec6aa;
+  --accent-primary-soft: rgba(46, 179, 152, 0.13);
+  --accent-gold: #deb05a;
+  --accent-gold-soft: rgba(222, 176, 90, 0.14);
+  --accent-plum: #b18ec4;
+  --accent-plum-soft: rgba(177, 142, 196, 0.14);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-page);
+  color: var(--text-primary);
+  font-family: var(--font-ar);
+  line-height: 1.65;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  transition: background-color 200ms cubic-bezier(0.16, 1, 0.3, 1), color 200ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+html[lang="en"] body {
+  font-family: var(--font-en);
+}
+
+html[lang="hi"] body {
+  font-family: var(--font-hi);
+}
+
+.font-serif-ar {
+  font-family: var(--font-serif-ar);
+}
+
+.font-mono-tabular {
+  font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-variant-numeric: tabular-nums;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
